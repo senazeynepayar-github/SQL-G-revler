@@ -116,6 +116,36 @@ SELECT store_id, count(*) FROM customer GROUP BY store_id
 SELECT country_id, COUNT(*) FROM city GROUP BY country_id ORDER BY count(*) DESC LIMIT 1
 
 
+GÖREV-8 Cevaplar
+
+1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+CREATE TABLE employee (id INTEGER, name VARCHAR(50), birthday DATE, email VARCHAR(100) )
+
+2. Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+
+insert into employee (id, name, birthday, email) values (1, 'Kellina', '2011-03-20', 'kluetkemeyers0@csmonitor.com');
+insert into employee (id, name, birthday, email) values (2, 'Melesa', '2006-02-05', 'msipson1@artisteer.com');
+insert into employee (id, name, birthday, email) values (3, 'Jarrett', '2013-09-12', 'jheam2@blogs.com');
+insert into employee (id, name, birthday, email) values (4, 'Nanice', '2022-05-21', 'nchalcroft3@mashable.com');
+insert into employee (id, name, birthday, email) values (5, 'Guinevere', '2006-01-22', 'gdeekes4@dagondesign.com');
+insert into employee (id, name, birthday, email) values (6, 'Bendicty', '2020-12-16', 'bwagstaff5@mlb.com');
+insert into employee (id, name, birthday, email) values (7, 'Augustina', '2019-03-28', 'acheeke6@pagesperso-orange.fr');
+insert into employee (id, name, birthday, email) values (8, 'Clement', '2013-08-06', 'cgarfitt7@bbc.co.uk');
+insert into employee (id, name, birthday, email) values (9, 'Lutero', '2023-02-07', 'lkealey8@bravesites.com');
+...
+
+3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+UPDATE employee
+	SET name = '	FATMA’,
+		birthday = '2000-01-01',
+		email = ‘fatma@gmail.com'
+	WHERE name = ‘K’ellina ;
+
+UPDATE employee
+	SET name = 'SENA',
+		birthday = '2000-01-01',
+		email = 'sena@gmail.com'
+	WHERE name = 'Melesa' ; 
 
 
 
